@@ -1,0 +1,16 @@
+function solution($n) {
+  $length = strlen($n);
+  $even = $length /2;
+  $split = [];
+
+  if(is_integer($even)){
+    $y = 0;
+    for($i=0; $i < 2; $i++){
+      $splitted = substr($n, $y, $even);
+      $split[] = array_sum(str_split($splitted, 1)):
+      $y += $even;
+    }
+    return $split[0] === $split[1];
+  }
+  return false;
+}
